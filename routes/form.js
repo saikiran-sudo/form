@@ -6,7 +6,7 @@ const serviceAccount = require('../serviceAccountKey.json');
 
  admin.initializeApp({
    credential: admin.credential.cert(serviceAccount),
-   databaseURL: 'https://formdata.firebaseio.com'
+   databaseURL: 'https://formdata-415b0.firebaseio.com'
  });
 
 const db = admin.firestore();
