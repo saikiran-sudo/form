@@ -1,6 +1,6 @@
 # form
 #STEP 1
-"git clone <git-file-link>"
+"git clone"
 
 #STEP 2
 go to git project directory,and perform this command
