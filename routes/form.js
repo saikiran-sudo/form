@@ -2,21 +2,12 @@ const express = require('express');
 const admin = require('firebase-admin');
 const router = express.Router();
 
-//const serviceAccount = require('../serviceAccountKey.json');
-require('dotenv').config();
+const serviceAccount = require('../serviceAccountKey.json');
 
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount)
-// });
-admin.initializeApp({
-  credential: admin.credential.cert({
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    clientId: process.env.FIREBASE_CLIENT_ID,
-    clientCertUrl: process.env.FIREBASE_CLIENT_CERT_URL
-  })
-});
+ admin.initializeApp({
+   credential: admin.credential.cert(serviceAccount)
+ });
+
 const db = admin.firestore();
 
 router.post('/submit', async (req, res) => {
