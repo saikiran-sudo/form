@@ -3,7 +3,7 @@
 "git clone"
 
 #STEP 2
-go to git project directory,and perform this command
+go to git root project directory,and perform this command
 "npm install express firebase-admin"
 
 #STEP 3
